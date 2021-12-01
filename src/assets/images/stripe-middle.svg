@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="180.4" viewBox="0 0 1920 180.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b200ff;
+      }
+
+      .cls-2 {
+        fill: #ffd500;
+      }
+    </style>
+  </defs>
+  <g id="stripe_middle" data-name="stripe middle" transform="translate(0 -939.6)">
+    <path id="purple_stripe" data-name="purple stripe" class="cls-1" d="M1920,14.6H1668.4L1641.63,48,1569.6,1.6,0,38.4V160L1604.2,66.422l37.433,27.816L1678.5,62.087,1920,48Z" transform="translate(0 938)"/>
+    <path id="yellow_stripe" data-name="yellow stripe" class="cls-2" d="M1920,0,1679.294,5.015l-38.171,30.8L1574.2-9.4,0,48V160L1592.727,62.087l48.9,32.151L1678.5,62.087,1920,48Z" transform="translate(0 960)"/>
+  </g>
+</svg>

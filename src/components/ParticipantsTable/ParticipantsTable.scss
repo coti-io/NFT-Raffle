@@ -1,0 +1,177 @@
+@import "../../variables.scss";
+
+.participants-wrapper {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  color: $white;
+  width: 100%;
+  padding: 0 20.833vw;
+  .raffle-wrapper {
+    padding: 2.5vw 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    .raffle-frame {
+      width: 100%;
+      height: calc(100% - 2.5vw);
+      position: absolute;
+      top: 1.25vw;
+      left: 0;
+      background: $primary-dark;
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+    }
+    .raffle-handle-wrapper {
+      position: absolute;
+      right: -1.25vw;
+      bottom: 5vw;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .participant-list {
+    margin: 0;
+    padding: 0;
+    height: calc(2.44vw * 6);
+    overflow-y: scroll;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-width: 1365px) {
+      height: calc(3.628vw * 6);
+    }
+    @media (max-width: 767px) {
+      padding: 0;
+      height: calc(10.099vw * 8);
+    }
+
+    .participant {
+      opacity: 1;
+      text-decoration: none;
+      list-style: none;
+      width: 100%;
+      margin: 0.417vw 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1.25vw;
+      &.winner {
+        opacity: 0.5;
+        .participant-data {
+          background-color: $primary-darker;
+          color: $white;
+          &.position {
+            background-color: $primary-darker;
+            color: $white;
+          }
+        }
+      }
+      &.selected {
+        .participant-data {
+          background-color: $yellow;
+          color: $primary-darker;
+          &.position {
+            background-color: $yellow;
+            color: $primary-darker;
+          }
+        }
+      }
+      .participant-data {
+        font-size: 0.833vw;
+        background-color: $primary-darker;
+        color: $white;
+        width: 100%;
+        max-width: 100%;
+        height: 1.667vw;
+        padding: 0.417vw;
+        margin: 0 0.417vw;
+        position: relative;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: skewX(-15deg);
+        @media (max-width: 1365px) {
+          width: 100%;
+          min-width: 15.11vw;
+          height: 2.418vw;
+          padding: 0.605vw;
+          margin: 0 0.605vw;
+          font-size: 1.172vw;
+        }
+        @media (max-width: 767px) {
+          width: 100%;
+          max-width: calc(100% - 16.1vw);
+          min-width: 12.556vw;
+          height: 8.889vw;
+          padding: 0 2.222vw;
+          font-size: 4.444vw;
+          font-weight: 700;
+        }
+        &.position {
+          width: 2.5vw;
+          min-width: 2.5vw;
+          background-color: $yellow;
+          color: $primary-darker;
+          @media (max-width: 1365px) {
+            min-width: 3.626vw;
+            width: 3.626vw;
+          }
+          @media (max-width: 767px) {
+            min-width: 12.556vw;
+            width: 12.556vw;
+            margin-right: 4.444vw;
+          }
+        }
+        &.address {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          max-width: calc(100% - 2.5vw);
+          span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}
+
+.total-participant {
+  text-align: right;
+  margin-block-start: 0.125vw;
+  width: 100%;
+  padding: 0 22.083vw;
+  b {
+    color: $yellow;
+  }
+  @media (max-width: 1365px) {
+    margin-block-start: 0.125vw;
+  }
+  @media (max-width: 767px) {
+    margin-block-start: 1.25vw;
+  }
+}
+
+.raffle-btn {
+  transition: all 0.4s ease;
+  &.raffle-on {
+    opacity: 0.5;
+    cursor: unset;
+  }
+}

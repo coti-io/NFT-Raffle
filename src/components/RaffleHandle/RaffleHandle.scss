@@ -1,0 +1,48 @@
+@import "../../index.scss";
+
+.raffle-handle {
+  position: relative;
+  float: left;
+  vertical-align: top;
+  height: 90px;
+  margin-top: 100px;
+  width: 22px;
+  border-radius: 0 8px 8px 0;
+  border: 1px solid rgba(189, 160, 112, 0.5);
+  background: $primary-light;
+  transition: all 0.3s linear;
+  &::before,
+  .handle-top {
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all 0.3s linear;
+  }
+  &::before {
+    background: $white;
+    width: 14px;
+    height: 125px;
+    bottom: 36px;
+    right: -17px;
+    border-radius: 0 16px 12px 0;
+  }
+  .handle-top {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: -96px;
+    right: -31px;
+    border: 1px solid $primary-darker;
+    background: $yellow;
+  }
+  &.active {
+    background-position: 0 40px;
+    &::before {
+      height: 0px;
+      transform: translateY(4px);
+    }
+    .handle-top {
+      transform: translateY(130px);
+    }
+  }
+}

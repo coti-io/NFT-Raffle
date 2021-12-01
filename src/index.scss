@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@700&display=swap');
+@import './variables.scss';
+
+// Styles resets
+body {
+  margin: 0;
+  padding:0;
+  font-family: Montserrat,Arial,Helvetica,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+html, body, #raffleApp {
+  height: 100%;
+  margin: 0;
+  padding:0;
+}
+
+a,a:visited,a:focus,a:focus-visible, a:focus-within {
+  text-decoration: none;
+  color: $white;
+}
